@@ -43,7 +43,9 @@ function love.update(dt)
 		if colorPopped == ball.color then
 			score = score + 1
 		else
-			missesLeft = missesLeft - 1
+			if missesLeft > 0 then
+				missesLeft = missesLeft - 1
+			end
 		end
 
 	end
