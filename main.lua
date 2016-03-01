@@ -6,7 +6,7 @@ width = nil
 height = nil
 ball = {x = 325, y = 325, y_velocity = nil, color = nil, dead = true}
 ballColors = {{189, 255, 145}, {255, 233, 145}, {255, 145, 145}, {145, 233, 255}}
-gravity = 900
+gravity = 950
 incrementer = math.pi/2
 score = 0
 colorPopped = 1
