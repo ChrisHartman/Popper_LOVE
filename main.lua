@@ -6,7 +6,7 @@ width = nil
 height = nil
 ball = {x = 325, y = 325, y_velocity = nil, color = nil, dead = true}
 ballColors = {{189, 255, 145}, {255, 233, 145}, {255, 145, 145}, {145, 233, 255}}
-gravity = 1000
+gravity = 900
 incrementer = math.pi/2
 score = 0
 colorPopped = 1
@@ -23,6 +23,8 @@ function love.load(arg)
     math.randomseed(os.time())
     --we now have an asset ready to be used inside Love
 end
+
+
 
 function love.update(dt)
 	if missesLeft > 0 then
@@ -51,6 +53,10 @@ function love.update(dt)
 				end
 			end
 		end
+	elseif love.keyboard.isDown('return') then
+		missesLeft = 3
+		ball.dead = true
+		score = 0
 	end
 end
 
