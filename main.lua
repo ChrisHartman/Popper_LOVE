@@ -7,6 +7,10 @@ height = nil
 ball = {x = 325, y = 325, y_velocity = nil, color = nil, dead = true}
 ballColors = {{189, 255, 145}, {255, 233, 145}, {255, 145, 145}, {145, 233, 255}}
 gravity = 1000
+incrementer = math.pi/2
+score = 0
+colorPopped = 1
+missesLeft = 3
 
 
 
@@ -33,7 +37,17 @@ function love.update(dt)
 		ball.y = ball.y - ball.y_velocity*dt
 		ball.y_velocity = ball.y_velocity - gravity * dt
 	end
-	--if ball.y < 
+	if ball.y > 600 then
+		ball.dead = true
+		colorPopped = math.ceil((rotation/incrementer)%4)
+		if colorPopped == ball.color then
+			score = score + 1
+		else
+			missesLeft = missesLeft - 1
+		end
+
+	end
+
 		
 
    
@@ -42,7 +56,7 @@ end
 
 
 function love.draw(dt)
-    love.graphics.draw(playerImg, 325, 325 , rotation, 1, 1, width / 2, height / 2)
+   
     love.graphics.setColor(ballColors[ball.color])
     
     love.graphics.circle("fill", ball.x, ball.y, 5, 10) -- Draw white circle with 100 segments.
@@ -50,6 +64,8 @@ function love.draw(dt)
 
 
     love.graphics.setColor(255, 255, 255)
+    love.graphics.draw(playerImg, 325, 325 , rotation, 1, 1, width / 2, height / 2)
+    love.graphics.print("Score: " .. score .. "\nMisses left: " .. missesLeft, 25, 25)
     --Canvas:clear()
 end
 
