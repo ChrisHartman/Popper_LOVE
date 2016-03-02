@@ -6,7 +6,7 @@ width = nil
 height = nil
 ball = {x = 325, y = 325, y_velocity = nil, color = nil, dead = true}
 ballColors = {{189, 255, 145}, {255, 233, 145}, {255, 145, 145}, {145, 233, 255}}
-gravity = 950
+gravity = 975
 incrementer = math.pi/2
 score = 0
 colorPopped = 1
@@ -60,8 +60,6 @@ function love.update(dt)
 	end
 end
 
-
-
 function love.draw(dt)
    
     love.graphics.setColor(ballColors[ball.color])
@@ -72,8 +70,9 @@ function love.draw(dt)
     love.graphics.setFont(scoreFont)
     love.graphics.setColor(255, 255, 255)
     love.graphics.draw(playerImg, 325, 325 , rotation, 1, 1, width / 2, height / 2)
-    love.graphics.print("Score: " .. score .. "\nMisses left: " .. missesLeft, 25, 25)
-    if missesLeft <= 0 then
+    if missesLeft > 0 then
+    	love.graphics.print("Score: " .. score .. "\nMisses left: " .. missesLeft, 25, 25)
+    else
     	love.graphics.setFont(gameOverFont)
     	love.graphics.print("GAME OVER\n   Score: " .. score, 40, 250, 0)
     end
