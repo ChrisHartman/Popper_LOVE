@@ -6,7 +6,7 @@ This repository contains the source code to build the project using love, along 
 ###OS X
 The mac app is located inside of popper.zip. Unzip the folder and open the app. If you get an unidentified developer error and there is no button to open the app, try right clicking the app and selecting "open". This should offer the same dialog except with a button to open the app anyway.
 
-###Windows
+###Windows or Linux
 
 Follow instructions on [the LÖVE wiki](https://love2d.org/wiki/Game_Distribution) starting with creating a game executable (the .love file is included in the repo)
 
