@@ -1,4 +1,4 @@
-This is a simple game that I created using the LÖVE framework. 
+This is a simple game that I created using the [LÖVE](https://love2d.org/) framework. 
 
 ##How to Run
 This repository contains the source code to build the project using love, along with a .love file to create a mac app or executable file, and popper.zip, which holds the mac app.
