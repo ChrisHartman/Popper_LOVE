@@ -15,4 +15,4 @@ Follow instructions on [the LÖVE wiki](https://love2d.org/wiki/Game_Distributio
 
 
 ##How to Play
-Use the right and left arrow keys to move the large spike ball clockwise and counter clockwise, respectively. The goal is to have each falling ball fall on spikes of the same color. Each ball on the correct color is worth one point. You are allowed three misses. After that, the game will display "Game Over" along with your final score. Hitting the return key will start the game over. 
+Use the right and left arrow keys to move the large spike ball clockwise and counter clockwise, respectively. The goal is to have each falling ball fall on spikes of the same color. Each ball on the correct color is worth one point. You are allowed three misses. After that, the game will display "Game Over" along with your final score. Hitting the return or space key will start the game over. 
