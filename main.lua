@@ -82,8 +82,6 @@ end
 -- Checks if ball has been popped and if it was popped on the right color
 -- increments score or decrements missesLeft accordingly
 function checkCollision()
-
-
 	if ball.y > 575 then
 		ball.dead = true
 		colorPopped = math.ceil((rotation/incrementer)%4) -- which quadrant the ball is in
