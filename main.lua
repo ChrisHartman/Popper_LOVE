@@ -4,6 +4,7 @@
 
 function love.load(arg)
 	-- Graphics loading
+	popSound  = love.audio.newSource('assets/pop.ogg', static)
     playerImg = love.graphics.newImage('assets/spikeball.png')
     scoreFont = love.graphics.newFont("assets/Margot-Regular.ttf", 20)
 	gameOverFont = love.graphics.newFont("assets/Margot-Regular.ttf", 100)
@@ -66,6 +67,7 @@ function newBall()
 	ball.y = 325
 	ball.color = math.random(4)
 	ball.dead = false
+	popSound:play()
 end
 
 function checkpause(dt)
