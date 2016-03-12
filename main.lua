@@ -51,6 +51,7 @@ function love.update(dt)
 		missesLeft = 3
 		ball.dead = true
 		score = 0
+		pausetime = 0
 	end
 end
 
@@ -72,7 +73,7 @@ end
 
 function checkpause(dt)
 	pausetime = pausetime + dt
-	if love.keyboard.isDown('p') and pausetime > .2 then
+	if love.keyboard.isDown('space') and pausetime > .2 then
 		paused = not paused
 		pausetime = 0
 	end
